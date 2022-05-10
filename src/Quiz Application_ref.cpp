@@ -1,44 +1,48 @@
+#include <iostream>
+
+#include <string>
+
 int Guess;
 int Total;
 
 class Question
 {
 	private:
-		string Question_Text;
-		string Answer_1;
-		string Answer_2;
-		string Answer_3;
-		string Answer_4;
+		std::string Question_Text;
+		std::string Answer_1;
+		std::string Answer_2;
+		std::string Answer_3;
+		std::string Answer_4;
 		
 		int Correct_Answer;
 		int Question_Score;
 	
 	public:
-		void setValues (string, string, string, string, string, int, int);
+		void setValues (std::string, std::string, std::string, std::string, std::string, int, int);
 		void askQuestion ();
 }		
 
 int main ()
 {
-	cout << "Press Enter to start the quiz..." << endl;
-	cin.get;
+	std::cout << "Press Enter to start the quiz..." << std::endl;
+	std::cin.get;
 	
-	string Name;
+	std::string Name;
 	int Age;
 	
-	string Response;
-	cout << “Are you ready to take the Quiz “ << Name << “? Yes / No.” << endl;
+	std::string Response;
+	std::cout << "Are you ready to take the Quiz " << Name << "? Yes / No." << std::endl;
 	
 	if (Response == "yes")
 	{
-		cout << endl 
+		std::cout << std::endl 
 			 << "Ok, Good Luck!" 
 			 << endl 
 			 << endl;
 	}
 	else
 	{
-		cout << "Ok, Goodbye!" << endl;
+		std::cout << "Ok, Goodbye!" << std::endl;
 		return 0;
 	}
 	
